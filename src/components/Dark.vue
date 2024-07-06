@@ -1,7 +1,7 @@
 <template>
     <div @click="toggleDarkMode()" class="cursor-pointer">
         <!-- mt-4 mb-1 mx-auto -->
-        <img class="w-8 h-8" :src="isDark ? 'src/assets/sun.svg' : 'src/assets/moon.svg'" alt="Dark mode">
+        <img class="w-8 h-8" :src="isDark ? 'src/assets/sun.svg' : 'src/assets/dark.png'" alt="Dark mode">
            
     </div>
 </template>
