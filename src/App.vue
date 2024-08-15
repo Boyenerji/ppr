@@ -2,7 +2,13 @@
 import Dark from './components/Dark.vue';
 import 'animate.css';
 import dayjs from 'dayjs';
+
+
 import { ref, onMounted } from 'vue';
+
+
+
+
 
 
 import duration from 'dayjs/plugin/duration';
@@ -19,7 +25,17 @@ dayjs.locale('ru');
 const testH1 = ref('');
 const selected = ref('');
 
+
+
+
 const isAnimation = ref(false);
+
+
+
+
+
+
+
 
 // Установленная дата
 const date1 = dayjs('2017-01-01');
@@ -63,7 +79,7 @@ const testUp = () => {
   console.log(testH1);
   testH1.value.className += (' animate__animated animate__tada');
   setTimeout(() => {
-    testH1.value.className = ('mb-4 mt-5 text-4xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl');
+    testH1.value.className = ('mb-4 mt-5 text-5xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl');
   }, 1000);
 }
 
@@ -76,35 +92,36 @@ const testUp = () => {
 <Dark />
   
 
-<section class="bg-white dark:bg-gray-900 animate__animated animate__fadeInDown">
+<section class="bg-white dark:bg-gray-900 animate__animated animate__fadeInDown ">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-      <h1 class="mb-4 text-5xl font-extrabold leading-none tracking-tight text-gray-900 md:text-6xl lg:text-8xl dark:text-white">ППР 2024. <mark class="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">18 цех.</mark></h1>
+      <h1 class="mb-4 text-5xl font-extrabold leading-none tracking-tight text-gray-900 md:text-6xl lg:text-8xl dark:text-white">ППР 2024. <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">18 цех.</span></h1>
+      <p class="text-xl font-normal text-gray-500 lg:text-xl dark:text-gray-400">Стапеля, кондуктора, приспособления.</p>
     </div>
 </section>
 
 
 
 
-  <section class="bg-slate-50 dark:bg-gray-800 rounded-xl w-full testPhoto animate__animated animate__fadeInRight">
+  <section class="bg-slate-100 dark:bg-gray-800 rounded-xl w-full testPhoto animate__animated animate__fadeInRight">
       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
 
         <h1 class="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-5xl">Проверяем <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">оснастку</span> уже</h1>
 
         
         <h1 class="animate__animated animate__pulse animate__infinite mb-4 mt-5 text-4xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">{{ timeDifference }}</span></h1>
-        <h1 class="text-5xl font-extrabold dark:text-white"><small class="ms-2 font-semibold text-gray-500 dark:text-gray-400">{{ date1.format('LL') }} - {{ date3.format('LL') }}</small></h1>
+        <h1 class="text-2xl font-extrabold dark:text-white"><small class="ms-2 font-semibold text-gray-500 dark:text-gray-400">{{ date1.format('LL') }} - {{ date3.format('LL') }}</small></h1>
 
       </div>
   </section>
 
 
 
-  <section class="bg-slate-50 dark:bg-gray-800 rounded-xl w-full testPhoto mt-10 animate__animated animate__fadeInLeft">
+  <section class="bg-slate-100 dark:bg-gray-800 rounded-xl w-full testPhoto mt-10 animate__animated animate__fadeInLeft">
       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
 
         <h1 class="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-5xl">Кол-во <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">оснастки</span> по месяцам</h1>
 
-        <h1 ref="testH1" class="mb-4 mt-5 text-4xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">{{ selected }}</span></h1>
+        <h1 ref="testH1" class="mb-4 mt-5 text-5xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">{{ selected }}</span></h1>
 
         
 
@@ -112,8 +129,12 @@ const testUp = () => {
           <select v-model="selected" v-on:change="testUp" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
            <option disabled value="">Выбрать месяц:</option>
             <option value="195">Июль</option>
+            <option value="137">Август</option>
             <option value="144">Сентябрь</option>
             <option value="164">Октябрь</option>
+            <option value="107">Ноябрь</option>
+            <option value="116">Декабрь</option>
+            <option value="301">Январь</option>
           </select>
         </form>
 
@@ -121,52 +142,22 @@ const testUp = () => {
   </section>
 
 
-  <section class="bg-slate-50 dark:bg-gray-800 rounded-xl w-full testPhoto mt-10 animate__animated animate__fadeInLeft">
+  <section class="bg-slate-100 dark:bg-gray-800 rounded-xl w-full testPhoto mt-10 animate__animated animate__fadeInLeft">
       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
 
         <h1 class="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-5xl">Контакты <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"></span></h1>
-        <div class="contacts mt-5">
-          <div class="contacts-2 animate__animated animate__pulse animate__infinite">
+        <div class="contacts mt-5 animate__animated animate__slideInDown">
+          <div class="contacts-2 animate__animated animate__pulse animate__delay-2s animate__repeat-3">
             <a href="#"><img class="w-16 h-16 rounded" src="/src/assets/edgar.jpg" alt="Default avatar"></a>
             <p class="mt-2"><a href="https://api.whatsapp.com/send?phone=79534050382">Эдгар(ссылка)</a></p>
           </div>
           <div class="contacts-2">
-            <a href="#"><img class="w-16 h-16 rounded" src="/src/assets/dimos.jpeg" alt="Default avatar"></a>
+            <a href="#"><img class="w-16 h-16 rounded object-cover" src="/src/assets/dimos.jpeg" alt="Default avatar"></a>
             <p class="mt-2"><a href="https://api.whatsapp.com/send?phone=79655853316">Димос(ссылка)</a></p>
           </div>
         </div>
       </div>
   </section>
-
-
-
-
-
-
-
-
-
-<!-- <section class="bg-center bg-no-repeat bg-[url('src/assets/ppr2.png')] bg-blend-multiply">
-    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-      <h1 class="mb-4 text-5xl font-extrabold leading-none tracking-tight text-white md:text-6xl lg:text-8xl dark:text-white">ППР 2024 <mark class="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">18 цех</mark></h1>
-
-      <h1 class="text-5xl font-extrabold dark:text-white"><small class="ms-2 font-semibold text-white dark:text-gray-400">{{ date1.format('LL') }} - {{ date3.format('LL') }}</small></h1>
-
-        <h1 class="mb-4 mt-5 text-4xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">{{ timeDifference }}</span></h1>
-
-    </div>
-</section> -->
-
-
-
-
-
-
-
-
-
-
-
 
 
 

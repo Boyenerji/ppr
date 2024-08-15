@@ -1,8 +1,10 @@
+@import './base.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import './base.css';
+
 
 
 
@@ -11,9 +13,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   font-weight: normal;
 }
 

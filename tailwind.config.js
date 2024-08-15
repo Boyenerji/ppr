@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
+    "./index.html",
     "./src/**/*.{html,js,vue}",
     "./node_modules/flowbite/**/*.js"
   ],
@@ -9,7 +10,8 @@ export default {
   },
   darkMode: 'selector',
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    require('tailwindcss-primeui')
   ]
 }
 

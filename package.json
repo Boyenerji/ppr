@@ -9,10 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@primevue/themes": "^4.0.0",
     "@vueuse/core": "^10.11.0",
     "animate.css": "^4.1.1",
     "dayjs": "^1.11.11",
     "flowbite": "^2.4.1",
+    "pinia": "^2.1.7",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.0.0",
+    "tailwindcss-primeui": "^0.3.4",
     "vue": "^3.4.29"
   },
   "devDependencies": {
